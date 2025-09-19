@@ -1,0 +1,127 @@
+.chat-app {
+  display: flex;
+  height: 100vh;      /* full height */
+  width: 100vw;       /* full width */
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Left Panel: 40% width */
+.chat-list {
+  width: 40%;
+  background: #f5f5f5;
+  overflow-y: auto;
+  border-right: 1px solid #ddd;
+}
+
+.chat-item {
+  padding: 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.chat-item.active {
+  background: #e0f7fa;
+}
+
+.chat-name {
+  font-weight: bold;
+}
+
+.chat-last-message {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* Right Panel: 60% width */
+.chat-panel {
+  width: 60%;
+  display: flex;
+  flex-direction: column; /* column layout */
+  background: #fff;
+}
+
+.chat-header {
+  padding: 15px;
+  background: #0288D1;
+  color: white;
+  font-weight: bold;
+  flex-shrink: 0; /* ✅ stays at top */
+}
+
+.chat-messages {
+  flex: 1;              /* ✅ take all available space */
+  padding: 15px;
+  overflow-y: auto;     /* ✅ scroll only here */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-message {
+  padding: 10px 15px;
+  border-radius: 15px;
+  max-width: 70%;
+  word-break: break-word;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat-message.user {
+  align-self: flex-end;
+  background: #c5e1a5;
+}
+
+.chat-message.bot {
+  align-self: flex-start;
+  background: #e1f5fe;
+}
+
+.chat-input-container {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background: #fff;
+  flex-shrink: 0; /* ✅ always at bottom */
+}
+
+.chat-input-container input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.chat-input-container button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background: #0288D1;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.no-chat-selected {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 1.1em;
+}
+
+@media (max-width: 768px) {
+  .chat-list {
+    width: 100%;
+  }
+  .chat-panel {
+    display: none;
+  }
+  .chat-panel.active {
+    display: flex;
+    width: 100%;
+  }
+}

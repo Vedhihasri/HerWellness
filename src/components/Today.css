@@ -1,0 +1,60 @@
+.today-container {
+  background: linear-gradient(to bottom, #ffe6f0, #fff);
+  min-height: 100vh;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.status-box {
+  text-align: center;
+  padding: 30px 15px;
+}
+
+.status-box h2 {
+  color: #e75480;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.log-btn {
+  background: #e75480;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.log-btn:hover {
+  background: #d2436e;
+}
+
+.symptom-box {
+  margin-top: 30px;
+}
+
+.symptom-box h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.cards {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  min-width: 180px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-size: 14px;
+  color: #444;
+  text-align: center;
+}

@@ -1,0 +1,98 @@
+/* Calendar container - full width grid */
+.calendar-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 30px;
+
+  background-color: #fff0f6;  /* light pink */
+
+  width: 100vw;   /* full viewport width */
+  min-height: 100vh; /* full viewport height */
+  box-sizing: border-box;
+margin-top: 100px;
+  justify-items: center;
+}
+
+
+/* Each month card takes full width of its column */
+.month-card {
+  background-color: #fff0f6;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s;
+  width: 100%; /* full column width */
+}
+
+.month-card:hover {
+  transform: translateY(-5px);
+}
+
+.month-card h4 {
+  color: #e75480;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* Days grid */
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  justify-items: center;
+}
+
+/* Day styling */
+.day {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 500;
+  color: #333;
+  transition: all 0.2s;
+}
+
+.day:hover {
+  background-color: #ffd1dc;
+}
+
+.day.selected {
+  background-color: #dc3545;
+  color: white;
+  font-weight: bold;
+}
+
+.day.today {
+  border: 2px solid #e75480;
+}
+
+.day.empty {
+  background: transparent;
+  cursor: default;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .calendar-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .calendar-container {
+    grid-template-columns: 1fr; /* 1 per row */
+  }
+
+  .day {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+

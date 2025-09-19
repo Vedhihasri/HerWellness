@@ -1,0 +1,96 @@
+/* Global Home Container */
+.home-container {
+  width: 100vw;                   /* full width */
+  min-height: 100vh;              /* at least full screen */
+  background: linear-gradient(135deg, #ffe6f0, #fff0f5, #fffaf0);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Make hero paragraph narrower and centered */
+.hero-paragraph {
+  max-width: 700px;  /* adjust width as needed */
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;   /* improve readability */
+}
+
+/* About Section */
+.about-section {
+  width: 100vw;
+  padding: 5vw;
+  background: linear-gradient(135deg, #ffe6f0, #fff0f5, #fffaf0);
+}
+
+.about-section .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.about-section .col-md-6 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Facts Section */
+.facts-section {
+  width: 100vw;
+  padding: 5vw;
+  background: linear-gradient(135deg, #ffe6f0, #fff0f5, #fffaf0);
+}
+
+.fact-card {
+  transition: transform 0.3s ease;
+}
+
+.fact-card:hover {
+  transform: scale(1.03);
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  width: 100vw;
+  padding: 5vw;
+  background: linear-gradient(135deg, #ffe6f0, #fff0f5, #fffaf0);
+}
+
+.testimonial-card {
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.05);
+}
+
+/* FAQs Section */
+.faqs-section {
+  width: 100vw;
+  padding: 5vw;
+  background: linear-gradient(135deg, #ffe6f0, #fff0f5, #fffaf0);
+}
+
+.accordion-button {
+  font-weight: 600;
+  color: #dc3545; /* Bootstrap danger red */
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
